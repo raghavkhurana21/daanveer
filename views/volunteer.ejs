@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+      
+        <title>DAANVEER</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+   
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<link rel="stylesheet" href="/css/nav_style.css">-->
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"> -->
+       
+        <style>
+
+* {
+  box-sizing: border-box;
+  
+}
+
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #222122c4;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  /* background-color: #f2f2f2; */
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+
+          
+        </style>
+   <script>     
+    function req()
+    {
+    var empt = document.forms["form1"]["name","email","pnumber","edu","city","address","pincode","govid","intrst"].value;
+    if (empt == "")
+    {
+    alert("Please fill the required");
+    return false;
+    }
+    else 
+    {
+    alert('Thank you for your interest in associating with DAANVEER 🙇');
+    return true; 
+    }
+    }
+ </script>
+    </head>
+    <body style="background:#e0e480">
+        <!-- <div class="banner-image" >
+          <header style="background: antiquewhite;">
+           
+            <img class="logo" src="/images/logo2.png" width="150" height="100" margin-right=10px alt="logo">
+            <nav>
+                <ul class="nav_list">
+                    <li><a href="http://localhost:8000/" style="color: black">Home</a></li>
+                    <li><a href="http://localhost:8000/users/about" style="color: black">About</a></li>
+                    <li><a href="http://localhost:8000/users/contact" style="color: black">Donate</a></li>
+                    <li><a href="http://localhost:8000/users/event" style="color: black">Upcoming Events</a></li>
+                    <li><a href="http://localhost:8ss000/" style="color: black">Be Voluntree</a></li>
+                    <li><a href="http://localhost:8000/users/Contact-Us" style="color: black">Contact</a></li>
+                    
+                    
+                </ul>
+            </nav> -->
+            
+            
+        </header>
+          <input type="checkbox" id="check">
+          <header style="background: antiquewhite;">
+            </div>
+             <a href="/"><img class="logo" src="/images/logo2.png" width="150" height="100" margin-right=10px alt="logo"></a>
+            <div class="navigation">
+              <a href="/">Home</a>
+              <a href="/users/about">About</a>
+              <a href="/users/contact">Donate</a>
+              <a href="/users/event">Upcoming Events</a>
+              <a href="/users/Contact-Us">Contact</a>
+              <a href="/users/volunteer">Be Volunteer</a>
+              <!-- <button ></button> -->
+            </div>
+            
+          </header>
+        <!-- <header >
+       <img class="logo" src="/images/logo2.png" width="150" height="100" margin-right=10px alt="logo">
+      <nav>
+          <ul class="nav_list">
+              <li><a href="/" style="color: black">Home</a></li>
+              <li><a href="/users/about">About</a></li>
+              <li><a href="/users/contact">Donate</a></li>
+              <li><a href="/users/event">Upcoming Events</a></li>
+              <li>
+                <a href="http://localhost:8000/">Be Voluntree</a>
+              </li>
+              <li><a href="/users/Contact-Us">Contact Us</a></li>
+              
+          </ul>
+      </nav>
+ 
+  </header> -->
+       
+
+           <!-- <form action="/create-contact" method="POST">
+            <input type="text" name="name" placeholder="Enter name" required>
+            <input type="email" name="email" placeholder="Enter email" required>
+            <input type="text" name="subject" placeholder="Enter subject" required>
+
+
+            <button type="submit">Add contact</button>
+        </form> -->
+
+        <div class="container" style="color: inherit;">
+            <form action="/volunteer" method="POST" onsubmit="req()" name="form1">
+              <div class="row">
+                <div class="col-25">
+                  <label for="fname">Full Name*</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="fname" name="name" placeholder="Your full name" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="lname">E-mail*</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" name="email" placeholder="Your e-mail" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="lname">Contact no.*</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" name="pnumber" placeholder="Phone no." maxlength="10" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="lname">Recent Education Qualification*</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" name="edu" placeholder="Education pursuing or completed recently" required>
+                </div>
+              </div>
+            
+              
+              <div class="row">
+                <div class="col-25">
+                  <label for="subject">City*</label>
+                </div>
+                <div class="col-75">
+                  <textarea type="text" name="city" placeholder="Your City" style="height:100px" required></textarea>
+                </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="subject">Permanent Address*</label>
+                </div>
+                <div class="col-75">
+                  <textarea type="text" name="address" placeholder="Your Address" style="height:100px" required></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="lname">Pincode*</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" name="pincode" placeholder="Pincode" maxlength="6" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="subject">Government issued ID*</label>
+                </div>
+                <div class="col-75">
+                  <textarea type="text" name="govid" placeholder="(AADHAAR Card Number, PAN Card, Voter ID, Driving License)" style="height:200px" required></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="subject">Tell us in which areas you are specially interested in working</label>
+                </div>
+                <div class="col-75">
+                  <input type="checkbox" name="intrst[]" value="Events" > Events <br>
+                  <input type="checkbox" name="intrst[]" value="Field Work"> Field Work <br>
+                  <input type="checkbox" name="intrst[]" value="Fundraising"> Fundraising <br>
+                  <input type="checkbox" name="intrst[]" value="Deliveries"> Deliveries <br>
+                  <input type="checkbox" name="intrst[]" value="Website Development and IT"> Website Development and IT <br>
+                  <input type="checkbox" name="intrst[]" value="Volunteer Coordination"> Volunteer Coordination <br>
+                  <input type="checkbox" name="intrst[]" value="Newsletter Production"> Newsletter Production
+
+                </div>
+              </div>
+              <div>
+                <p>Our Policy<br>
+                  It is the policy of this organisation to provide equal opportunities without regard to race, color, religion, state origin, gender, age, or disability.
+                  </p>
+              </div>
+              <div class="row" style="margin: 25px 500px 0 0">
+                <input type="submit" value="Submit Details">
+              </div>
+            </form>
+          </div>
+          
+        
+    </body>
+</html>
