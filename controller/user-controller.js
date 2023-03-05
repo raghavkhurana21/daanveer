@@ -5,7 +5,7 @@ module.exports.about = (req,res)=>{
 }
 module.exports.contact = (req,res)=>{
 
-    return res.render('contact.ejs');
+    return res.render('Contact.ejs');
 
 }
 module.exports.event = (req,res)=>{
